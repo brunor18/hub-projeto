@@ -1,0 +1,14 @@
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\bin\Debug\net10.0\struct-bruno.exe
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\bin\Debug\net10.0\struct-bruno.deps.json
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\bin\Debug\net10.0\struct-bruno.runtimeconfig.json
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\bin\Debug\net10.0\struct-bruno.dll
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\bin\Debug\net10.0\struct-bruno.pdb
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\struct-bruno.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\struct-bruno.AssemblyInfoInputs.cache
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\struct-bruno.AssemblyInfo.cs
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\struct-bruno.csproj.CoreCompileInputs.cache
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\struct-bruno.dll
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\refint\struct-bruno.dll
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\struct-bruno.pdb
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\struct-bruno.genruntimeconfig.cache
+C:\Users\eduar\OneDrive\Área de Trabalho\struct\struct-bruno\obj\Debug\net10.0\ref\struct-bruno.dll
