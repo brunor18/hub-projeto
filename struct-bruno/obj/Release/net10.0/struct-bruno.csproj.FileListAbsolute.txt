@@ -1,0 +1,15 @@
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\bin\Release\net10.0\struct-bruno.exe
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\bin\Release\net10.0\struct-bruno.deps.json
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\bin\Release\net10.0\struct-bruno.runtimeconfig.json
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\bin\Release\net10.0\struct-bruno.dll
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\bin\Release\net10.0\struct-bruno.pdb
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\struct-bruno.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\struct-bruno.AssemblyInfoInputs.cache
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\struct-bruno.AssemblyInfo.cs
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\struct-bruno.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\struct-bruno.sourcelink.json
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\struct-bruno.dll
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\refint\struct-bruno.dll
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\struct-bruno.pdb
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\struct-bruno.genruntimeconfig.cache
+C:\Users\bruno\Desktop\EX-RATS\hub-projeto\struct-bruno\obj\Release\net10.0\ref\struct-bruno.dll

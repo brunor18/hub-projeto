@@ -2,12 +2,13 @@
 
 using System;
 using struct_bruno.Models;
+namespace struct_bruno.obj;
     
 
 
 public class Program
 {
-    struct Projeto{
+    public struct Projeto{
             public int ID ;
             public string nomeProjeto ;
             public string nomeAluno ;
@@ -16,9 +17,9 @@ public class Program
             public bool statusProjeto; // true= concluido, false = em andamento
     };
 
-    Projeto[] projetos = new Projeto[20];
+    static Projeto[] projetos = new Projeto[20];
 
-    static void Main()
+    static void Main(string[] args)
     {
         while (true) 
         {
@@ -30,15 +31,17 @@ public class Program
 
             if(option == 1)
             {
-                Controllers.addProjeto(); 
+                Console.Clear();
+                Controllers.addProjeto(projetos); 
             }
-            if(option == 2)
+            else if(option == 2)
             {
-                // listarProjetos();
+                Console.Clear();
+                Controllers.listarProjetos(projetos);
             }
-            if(option == 3)
+            else if(option == 3)
             {
-                // break;
+                break;
             }
             
         } 
