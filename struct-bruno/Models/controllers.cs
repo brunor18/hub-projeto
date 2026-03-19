@@ -7,26 +7,73 @@ public class Controllers(){
         {
           if(projetos[i].ID == 0)
             {
-                Console.Write("Nome do projeto: ");
-                projetos[i].nomeProjeto = Console.ReadLine();
-                Console.Clear();
 
-                Console.Write("Nome do aluno: ");
-                projetos[i].nomeAluno = Console.ReadLine();
-                Console.Clear();
+                while (true)
+                {
+                    Console.Write("Nome do projeto: ");
+                    string respostaNomeProjetoForm = Console.ReadLine();
 
+                    if(string.IsNullOrWhiteSpace(respostaNomeProjetoForm) )
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Campo em branco");
+                    }
+                    else
+                    {
+                        projetos[i].nomeProjeto = respostaNomeProjetoForm;
+                        Console.Clear();
+                        break;
+                    }
+
+                    
+                }
+                
+                while (true)
+                {
+                    Console.Write("Nome do aluno: ");
+
+                    string respostaNomeAlunoForm = Console.ReadLine();
+
+                    if (!string.IsNullOrWhiteSpace(respostaNomeAlunoForm) && respostaNomeAlunoForm.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                    {
+                        projetos[i].nomeAluno = respostaNomeAlunoForm;
+                        Console.Clear();
+                        break;
+                    }
+                    else
+                    {   
+                        Console.Clear();
+                        Console.WriteLine("O nome deve conter apenas letras e não pode ser em branco");
+                    }
+                }
+                
+                
                 Console.Write("Área do projeto: ");
                 projetos[i].areaProjeto = Console.ReadLine();
                 Console.Clear();
+                
+                
 
-                Console.Write("Semestre: ");
-                projetos[i].semestre = Convert.ToInt32(Console.ReadLine());
-                Console.Clear();
+
+                while (true){
+                    Console.Write("Semestre: ");
+                    string entradaSemestre = Console.ReadLine();
+
+                    if (int.TryParse(entradaSemestre, out int respostaCertaSemestre)){
+                        projetos[i].semestre = respostaCertaSemestre;
+                        Console.Clear();
+                        break;
+                    }
+                    else
+                    {   
+                        Console.Clear();
+                        Console.WriteLine("Digite um número válido para o semestre");
+                    }
+                }
+
+                
 
                 projetos[i].ID = i + 1;
-
-                Console.WriteLine($"DEBUG: Salvei no índice {i}. O ID agora é {projetos[i].ID}");
-                Console.ReadKey();
 
                 while (true)
                 {
@@ -74,7 +121,6 @@ public class Controllers(){
             {
 
                 temProjetos = true;
-
                 Console.WriteLine($"ID: {proj.ID}\n");
                 Console.WriteLine($"Nome do projeto: {proj.nomeProjeto}");
                 Console.WriteLine($"Nome do aluno: {proj.nomeAluno}");

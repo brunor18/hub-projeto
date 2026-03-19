@@ -27,7 +27,18 @@ public class Program
             Console.WriteLine("1. Adicionar Projeto");
             Console.WriteLine("2. Listar projetos");
             Console.WriteLine("3. Sair");
-            int option = Convert.ToInt32(Console.ReadLine());
+
+            string entrada = Console.ReadLine();
+
+            if (!int.TryParse(entrada, out int option)){
+                Console.Clear();
+                Console.WriteLine("\nDigite apenas números (1, 2 ou 3)");
+                Console.WriteLine("Pressione qualquer tecla para tentar novamente...");
+                Console.ReadKey();
+                Console.Clear();
+                continue;
+            }
+
 
             if(option == 1)
             {
