@@ -27,7 +27,6 @@ public class Controllers(){
 
                     
                 }
-                
                 while (true)
                 {
                     Console.Write("Nome do aluno: ");
@@ -47,13 +46,9 @@ public class Controllers(){
                     }
                 }
                 
-                
                 Console.Write("Área do projeto: ");
                 projetos[i].areaProjeto = Console.ReadLine();
                 Console.Clear();
-                
-                
-
 
                 while (true){
                     Console.Write("Semestre: ");
@@ -147,5 +142,186 @@ public class Controllers(){
         Console.ReadKey();
         Console.Clear();
    }
+
+    public static void editarProjeto(Program.Projeto[] projetos)
+    {
+        while (true){
+    
+            Console.Write("Digite o ID do projeto que deseja editar ou digite 0 para sair: ");
+            string entradaID = Console.ReadLine();
+
+            if (int.TryParse(entradaID, out int idParaEditar))
+            {
+                if (idParaEditar == 0)
+                {
+                    Console.Clear();
+                    break;
+                }
+
+                bool encontrado = false;
+
+                for (int j = 0; j < projetos.Length; j++)
+                {
+
+                    if (projetos[j].ID == idParaEditar)
+                    {
+                        encontrado = true;
+                        Console.Clear();
+                        Console.WriteLine($"--- Editando Projeto ID: {idParaEditar} ---");
+
+                        Console.Write($"Nome do projeto ({projetos[j].nomeProjeto}): ");
+                        string novoNomeProjeto = Console.ReadLine();
+                        if (!string.IsNullOrWhiteSpace(novoNomeProjeto))
+                        {
+                            projetos[j].nomeProjeto = novoNomeProjeto;
+                        }
+
+                        Console.Write($"Nome do aluno ({projetos[j].nomeAluno}): ");
+                        string novoNomeAluno = Console.ReadLine();
+                        if (!string.IsNullOrWhiteSpace(novoNomeAluno))
+                        {
+                            if (novoNomeAluno.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                            {
+                                projetos[j].nomeAluno = novoNomeAluno;
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Nome do aluno inválido. Mantendo valor anterior\n.");
+                                
+                            }
+                        }
+
+                        Console.Write($"Área do projeto ({projetos[j].areaProjeto}): ");
+                        string novaAreaProjeto = Console.ReadLine();
+                        if (!string.IsNullOrWhiteSpace(novaAreaProjeto))
+                        {
+                            projetos[j].areaProjeto = novaAreaProjeto;
+                        }
+
+                        Console.Write($"Semestre ({projetos[j].semestre}): ");
+                        string entradaSemestre = Console.ReadLine();
+                        if (!string.IsNullOrWhiteSpace(entradaSemestre))
+                        {
+                            if (int.TryParse(entradaSemestre, out int novoSemestre))
+                            {
+                                projetos[j].semestre = novoSemestre;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Valor inválido para semestre. Mantendo valor anterior.\n");
+                            }
+                        }
+
+                        string statusAtual = projetos[j].statusProjeto ? "Concluído" : "Em andamento";
+
+                        Console.Write($"Projeto concluído? (S/N) ({statusAtual}): ");
+                        string entradaStatus = Console.ReadLine();
+
+
+                        if (!string.IsNullOrWhiteSpace(entradaStatus))
+                        {
+                            string respostaStatus = entradaStatus.Trim().ToLower();
+                            if (respostaStatus == "sim" || respostaStatus == "s")
+                            {
+                                projetos[j].statusProjeto = true;
+                            }
+                            else if (respostaStatus == "não" || respostaStatus == "nao" || respostaStatus == "n")
+                            {
+                                projetos[j].statusProjeto = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Status inválido. Mantendo valor anterior.\n");
+                            }
+                        }
+
+                        Console.Clear();
+                        Console.WriteLine("Projeto atualizado com sucesso\n");
+
+                        return;
+                    }
+                }
+
+                if (!encontrado)
+                {
+                    Console.WriteLine("ID não encontrado na lista.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Por favor, digite um número de ID válido.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+    }
+
+    public static void deletarProjeto(Program.Projeto[] projetos)
+    {
+
+        
+        while (true)
+        {
+            Console.Write("Digite o ID do projeto que deseja deletar ou digite 0 para sair: ");
+            string entradaID = Console.ReadLine();
+
+
+            if (!int.TryParse(entradaID, out int idParaDeletar))
+            {
+                Console.WriteLine("Por favor, digite um número de ID válido.");
+                Console.ReadKey();
+                Console.Clear();
+                continue;
+            }
+
+            if (idParaDeletar == 0)
+            {
+                
+                Console.Clear();
+                break;
+            }
+
+            int indiceProjeto = -1;
+            for (int i = 0; i < projetos.Length; i++)
+            {
+                if (projetos[i].ID == idParaDeletar)
+                {
+                    indiceProjeto = i;
+                    break;
+                }
+            }
+
+            if (indiceProjeto == -1)
+            {
+                Console.WriteLine("ID não encontrado na lista.");
+                Console.ReadKey();
+                Console.Clear();
+                continue;
+            }
+
+            for (int i = indiceProjeto; i < projetos.Length - 1; i++)
+            {
+                projetos[i] = projetos[i + 1];
+
+                if (projetos[i].ID != 0)
+                {
+                    projetos[i].ID = i + 1;
+                }
+            }
+
+            projetos[projetos.Length - 1] = new Program.Projeto();
+
+            Console.WriteLine("Projeto deletado com sucesso!");
+            Console.ReadKey();
+            Console.Clear();
+            return;
+        }
+    }
+
+
+
 }
     

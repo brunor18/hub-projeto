@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("struct-bruno")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f88f98cac77e7f50aeed563dbb29556ae38cebfb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46b1af74cb27aa002a221155d21bc4ba76f0e38d")]
 [assembly: System.Reflection.AssemblyProductAttribute("struct-bruno")]
 [assembly: System.Reflection.AssemblyTitleAttribute("struct-bruno")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

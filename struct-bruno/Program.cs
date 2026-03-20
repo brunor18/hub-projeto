@@ -26,7 +26,9 @@ public class Program
             Console.WriteLine("--Hub de Projetos--");
             Console.WriteLine("1. Adicionar Projeto");
             Console.WriteLine("2. Listar projetos");
-            Console.WriteLine("3. Sair");
+            Console.WriteLine("3. Alterar dados de um projeto");
+            Console.WriteLine("4. Excluir projeto");
+            Console.WriteLine("5. Sair");
 
             string entrada = Console.ReadLine();
 
@@ -51,6 +53,16 @@ public class Program
                 Controllers.listarProjetos(projetos);
             }
             else if(option == 3)
+            {
+                Console.Clear();
+                Controllers.editarProjeto(projetos);
+            }
+            else if(option == 4)
+            {
+                Console.Clear();
+                Controllers.deletarProjeto(projetos);
+            }
+            else if(option == 5)
             {
                 break;
             }
